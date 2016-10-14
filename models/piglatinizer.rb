@@ -18,8 +18,9 @@ class PigLatinizer
 	end
 
 	def piglatinize(sentence)
-		@sentence = sentence
-		split_sentence = @sentence.split(" ").map do |word|
+		@sentence = sentence.split(" ")
+		# binding.pry
+		@sentence.map do |word|
 			piglatinize_word(word)
 		end.join(" ")
 	end
